@@ -21,6 +21,9 @@ function generatePassword() {
   for (i = 0; i < rangeValue.value; i++) {
     password += data[Math.floor(Math.random() * data.length)];
   }
+  setTimeout(() => {
+    passwordOutput.value= "Password Generator";
+  }, 3000);
   passwordOutput.value = password;
   passwordOutput.select();
   document.execCommand("copy");
@@ -28,7 +31,7 @@ function generatePassword() {
   btn.textContent = "copier";
   setTimeout(() => {
     btn.textContent = "generer mots de passe";
-  }, 200);
+  }, 2000);
 }
 
 btn.addEventListener("click", generatePassword);
