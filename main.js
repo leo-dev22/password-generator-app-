@@ -15,7 +15,7 @@ function generatePassword() {
   if (symbols.checked) data.push(...dataSymbols);
 
   if (data.length === 0) {
-    alert("veuilez cocher au moins une case");
+    alert("Please, tick at least one case");
     return;
   }
   for (i = 0; i < rangeValue.value; i++) {
@@ -28,9 +28,9 @@ function generatePassword() {
   passwordOutput.select();
   document.execCommand("copy");
   //alert("votre mot de passe est:" + passwordOutput.value);
-  btn.textContent = "copier";
+  btn.textContent = "Your password has been copied";
   setTimeout(() => {
-    btn.textContent = "generer mots de passe";
+    btn.textContent = "password generated";
   }, 2000);
 }
 
